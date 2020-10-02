@@ -41,5 +41,5 @@ jobs:
 
       # Run PyTest on the checked out repository
       - name: Run pytest
-        run: pytest tests. 
+        run: pytest 
         continue-on-error: false
