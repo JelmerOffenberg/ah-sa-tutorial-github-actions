@@ -14,7 +14,7 @@ Fork this repository to your personal Github account. **Note**: We work on our p
 # Exercise 2:
 ### Run pytest and pre-commit on your machine
 This repository contains a sample Python based project. We've added a few tests in the tests directory. We'll now focus on running both PyTest and pre-commit. You will typically run your tests and pre-commit before pushing your code to the repository. We can reuse the knowledge from this step for the next exercise.
-- Install pre-commit and run [pre-commit](https://pre-commit.com/) on the repository, see: for instructions.
+- Install pre-commit and run [pre-commit](https://pre-commit.com/) on the repository
 - Use pytest to run the tests in this directory
 
 
