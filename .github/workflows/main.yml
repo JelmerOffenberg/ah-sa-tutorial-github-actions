@@ -6,10 +6,13 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master, acceptance]
+    branches:
+      - master
+      - acceptance
+    tags:
+      - v1
   pull_request:
     branches: [ master ]
-
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -24,13 +27,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
       - name: Setup Python
         uses: actions/setup-python@v2.1.3
         with:
           # Version range or exact version of a Python version to use, using SemVer's version range syntax.
           python-version: 3.7
-      
+
       - name: Echo working directory
         run: echo `pwd`
 
@@ -39,8 +42,21 @@ jobs:
         run: pip install -e .[dev]
         continue-on-error: false
 
-      # Run PyTest on the checked out repository
-      - name: Run pytest
-        run: pytest 
+      # - name: Install pre-commit
+      #   run: pre-commit install
+
+      - name: Install pre-commit
+        run: pre-commit run --all-files
         continue-on-error: false
 
+      # Run PyTest on the checked out repository
+      - name: Run pytest
+        run: pytest
+        continue-on-error: false
+
+  deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: This part is for the deployment
+        run: echo "Deployment"
