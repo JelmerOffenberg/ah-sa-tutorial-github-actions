@@ -42,6 +42,13 @@ jobs:
         run: pip install -e .[dev]
         continue-on-error: false
 
+      # - name: Install pre-commit
+      #   run: pre-commit install
+
+      - name: Install pre-commit
+        run: pre-commit run --all-files
+        continue-on-error: false
+
       # Run PyTest on the checked out repository
       - name: Run pytest
         run: pytest
