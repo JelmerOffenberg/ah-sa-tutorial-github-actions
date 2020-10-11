@@ -53,3 +53,10 @@ jobs:
       - name: Run pytest
         run: pytest
         continue-on-error: false
+
+  deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: This part is for the deployment
+        run: echo "Deployment"
