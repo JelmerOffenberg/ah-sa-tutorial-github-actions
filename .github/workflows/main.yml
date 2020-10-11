@@ -6,7 +6,7 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ master, acceptance]
   pull_request:
     branches: [ master ]
 
@@ -43,3 +43,4 @@ jobs:
       - name: Run pytest
         run: pytest tests. 
         continue-on-error: false
+

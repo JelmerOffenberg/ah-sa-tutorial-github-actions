@@ -13,7 +13,7 @@ Fork this repository to your personal Github account. **Note**: We work on our p
 ---
 # Exercise 2:
 ### Run pytest and pre-commit on your machine
-This repository contains a sample Python based project. We've added a few tests in the tests directory. We'll now focus on running both PyTest and pre-commit. You will typically run your tests and pre-commit before pushing your code to the repository. We can reuse the knowledge from this step for the next exercise.
+This repository contains a sample Python based project. We've added a few tests in the tests directory. We'll now focus on running both PyTest and pre-commit. You will typically run your tests and pre-commit _before_ pushing your code to the repository. We can reuse the knowledge from this step for the next exercise. 
 - Install pre-commit and run [pre-commit](https://pre-commit.com/) on the repository
 - Use pytest to run the tests in this directory
 
@@ -22,12 +22,17 @@ This repository contains a sample Python based project. We've added a few tests 
 ---
 # Exercise 3:
 ### Write your first Github Actions YAML file that runs pre-commit and pytest
-You might want to check the extensive [documentation]( https://docs.github.com/en/free-pro-team@latest/actions) for help on syntax and definitions.
+Now that you managed to run pre-commit and tests on your machine, it's time to set up a build in Github Actions. To create a workflow in Github Actions, go to the repository, click on Actions, click New Workflow and use the option to set up a workflow yourself. 
+
+<![alt](static/github_workflow.png)>
+
+
+You might want to check the extensive [documentation]( https://docs.github.com/en/free-pro-team@latest/actions) for help on syntax and definitions. Start out with a
 
 ---
 # Exercise 4:
-### Update your Github Actions YAML file so that it triggers a test & build when the acceptance branch receives a new commit.
-
+### Update your Workflow file so that it triggers a test & build when the acceptance branch receives a new commit.
+We're now directly working on Master (or Main), it's often desired to separate Acceptance and Master. Make an extra branch and update the workflow.
 
 ---
 # Exercise 5a:
