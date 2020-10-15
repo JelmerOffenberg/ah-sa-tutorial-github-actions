@@ -6,7 +6,7 @@
 ### Fork this repository
 For this hands-on session you'll need some boilerplate code that we created for you. This ensures that you can focus on the CI/CD components instead of on irrelevant problems. To make your own copy of this repository you should fork it! A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
-Fork this repository to your personal Github account. **Note**: We work on our personal accounts without any company data so that are in full control. For more information on how to fork a Github repository, check out:
+Fork this repository to your **personal** Github account. **Note**: We work on our personal accounts without any company data so that are in full control. For more information on how to fork a Github repository, check out:
 
 <https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo>
 
@@ -21,13 +21,13 @@ This repository contains a sample Python based project. We've added a few tests 
 
 ---
 # Exercise 3:
-### Write your first Github Actions YAML file that runs pre-commit and pytest
-Now that you managed to run pre-commit and tests on your machine, it's time to set up a build in Github Actions. To create a workflow in Github Actions, go to the repository, click on Actions, click New Workflow and use the option to set up a workflow yourself.
+### Write your first Github Actions Workflow file that runs pre-commit and pytest
+Now that you managed to run pre-commit and tests on your machine, it's time to set up a build in Github Actions. To create a workflow in Github Actions, go to the repository, click on Actions, click New Workflow and use the option to set up a workflow yourself. You will need to perform the same procedure as on your local machine (exercise 2), but this time in GitHub Actions.
 
-<![alt](static/github_workflow.png)>
+<img src="static/github_workflow.png" height="200px">
 
 
-You might want to check the extensive [documentation]( https://docs.github.com/en/free-pro-team@latest/actions) for help on syntax and definitions. Start out with a
+You might want to check the extensive [documentation]( https://docs.github.com/en/free-pro-team@latest/actions) for help on syntax and definitions. It can be handy to add the **workflow_dispatch** to your triggers, so that you can manually trigger the CI.
 
 ---
 # Exercise 4:
